@@ -309,14 +309,84 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 
 
 
+#cta_icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+    margin: 1rem
+}
+.icon{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+}
 
-#lol {
-    transform: translateY(1rem)
+.icon img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.icon:nth-child(4) img{
+    width: 60%;
+}
+
+.icon:nth-child(3) img{
+    width: 60%;
+    margin: 0 auto
+}
+
+#icon_train img{
+    display: grid;
+    width: 35%;
+    margin: 0 auto;
+}
+
+#icon_train p{
+    padding: 1rem;
 }
 
 
-
 /*CTA*/
+
+
+/*FOOTER*/
+
+footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color:#00AE5A;
+}
+
+footer img{
+    width: 100%;
+}
+
+.so_me_footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    grid-column-gap: 5%;
+    margin: 1rem 0 1rem 0;
+}
+
+.so_me_footer a img{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.so_me_footer a{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+
+}
+
+
+/*FOOTER*/
+
+
 
 /*ANIMATIONS*/
 
