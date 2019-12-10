@@ -6,6 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: inline-block;
+            cursor: pointer;
+            padding: .5rem;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 100%;
+            height: 10%;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+            border-radius: 1rem;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    </style>
 </head>
 
 <body>
@@ -24,8 +56,29 @@
                 <a href=""> <img src="pics/insta%20w.png" alt=""> </a>
                 <a href=""><img src="pics/location%20w.png" alt=""> </a>
                 <a href=""> <img src="pics/twitter%20w.png" alt=""> </a>
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
-
+            <div>
+            <a href="">
+                <p>FORSIDE</p>
+            </a>
+            <a href="">
+                <p>FLYFART</p>
+            </a>
+            <a href="">
+                <p>#STAYGROUNDED</p>
+            </a>
+            <a href="">
+                <p>FAKTA</p>
+            </a>
+            <a href="">
+                <p>HJÆLP OS</p>
+            </a>
+</div>
 
         </nav>
         <!----------------------------------------NAV SLUT--------------------------->
@@ -89,7 +142,7 @@
             <div id="video_grid">
                 <div class="column">
                     <img src="pics/fly%20med%20trail.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores maiores commodi iste soluta perferendis  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos nobis facere, ut perspiciatis necessitatibus architecto a dolore, laborum ab illo modi doloribus alias voluptas similique accusamus explicabo iusto. Fugit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores maiores commodi iste soluta perferendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos nobis facere, ut perspiciatis necessitatibus architecto a dolore, laborum ab illo modi doloribus alias voluptas similique accusamus explicabo iusto. Fugit.</p>
                 </div>
 
                 <div id="video">
@@ -100,7 +153,7 @@
 
                 <div class="column">
                     <img src="pics/fly%20med%20trail.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, quia  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sed atque sequi placeat recusandae culpa cum tenetur iste minima eligendi at, aliquid adipisci. Quia quos doloremque accusantium odio asperiores, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, quia Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sed atque sequi placeat recusandae culpa cum tenetur iste minima eligendi at, aliquid adipisci. Quia quos doloremque accusantium odio asperiores, voluptatum.</p>
                 </div>
             </div>
 
@@ -198,11 +251,11 @@
         <!----------------------------------------CTA SLUT--------------------------->
 
         <footer>
-               <div id="information">
+            <div id="information">
                 <img src="pics/1x/Artboard%207.png" alt="">
-                <p>Nørrebrogade 39, 1. tv.   |  2200 København N  |  +45 3536 1212   |   noah@noah.dk </p>
-                </div>
-                <div class="so_me_footer">
+                <p>Nørrebrogade 39, 1. tv. | 2200 København N | +45 3536 1212 | noah@noah.dk </p>
+            </div>
+            <div class="so_me_footer">
                 <a href=""> <img src="pics/facebook%20w.png" alt=""> </a>
                 <a href=""> <img src="pics/insta%20w.png" alt=""> </a>
                 <a href=""><img src="pics/location%20w.png" alt=""> </a>
@@ -219,6 +272,10 @@
 
 
 
-
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
     <script src="script.js"></script>
 </body></html>
