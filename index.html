@@ -6,38 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .container {
-            display: inline-block;
-            cursor: pointer;
-            padding: .5rem;
-        }
-
-        .bar1,
-        .bar2,
-        .bar3 {
-            width: 100%;
-            height: 10%;
-            background-color: white;
-            margin: 6px 0;
-            transition: 0.4s;
-            border-radius: 1rem;
-        }
-
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
-        }
-
-        .change .bar2 {
-            opacity: 0;
-        }
-
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-8px, -8px);
-        }
-    </style>
 </head>
 
 <body>
@@ -50,37 +18,43 @@
 
 
             </div>
+            <button class="burger_icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="so_me">
                 <a href=""> <img src="pics/facebook%20w.png" alt=""> </a>
                 <a href=""> <img src="pics/insta%20w.png" alt=""> </a>
                 <a href=""><img src="pics/location%20w.png" alt=""> </a>
                 <a href=""> <img src="pics/twitter%20w.png" alt=""> </a>
-                <div class="container" onclick="myFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
             </div>
-            <div>
-            <a href="">
-                <p>FORSIDE</p>
-            </a>
-            <a href="">
-                <p>FLYFART</p>
-            </a>
-            <a href="">
-                <p>#STAYGROUNDED</p>
-            </a>
-            <a href="">
-                <p>FAKTA</p>
-            </a>
-            <a href="">
-                <p>HJÆLP OS</p>
-            </a>
-</div>
+
+            <div></div>
+
+
+
 
         </nav>
+
+        <div class="burgermenu luk fade_out">
+            <a href="#splash" onclick="lukMenu()">
+                <p>FORSIDE</p>
+            </a>
+            <a href="#menu" onclick="lukMenu()">
+                <p>FLYFART</p>
+            </a>
+            <a href="#staygrounded" onclick="lukMenu()">
+                <p>#STAYGROUNDED</p>
+            </a>
+            <a href="#fakta" onclick="lukMenu()">
+                <p>FAKTA</p>
+            </a>
+            <a href="#cta_icons" onclick="lukMenu()">
+                <p>HJÆLP OS</p>
+            </a>
+        </div>
         <!----------------------------------------NAV SLUT--------------------------->
 
         <section id="splash">
@@ -273,9 +247,35 @@
 
 
     <script>
+        document.querySelector.addEventListener
+
         function myFunction(x) {
-            x.classList.toggle("change");
+            document.querySelector(".burgermenu").classList.toggle("fade_in");
+            document.querySelector(".burgermenu").classList.toggle("fade_out");
+            document.querySelector(".burgermenu").classList.toggle("luk");
+            document.querySelector(".container").classList.toggle("change");
+
+
+
         }
+
+        function lukMenu() {
+            document.querySelector(".burgermenu").classList.remove("fade_in");
+            document.querySelector(".burgermenu").classList.add("fade_out");
+            document.querySelector(".burgermenu").addEventListener("animationEnd", lukMenu2());
+            document.querySelector(".container").classList.toggle("change");
+        }
+
+
+        function lukMenu2() {
+            console.log("hej");
+            document.querySelector(".burgermenu").classList.add("fade_out");
+            document.querySelector(".burgermenu").classList.add("luk");
+
+        }
+
     </script>
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
