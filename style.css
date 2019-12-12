@@ -110,19 +110,23 @@ body {
 
 .burger_icon {
     width: 80%;
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+
 }
 
 .burger_icon span {
 
-    width: 80%;
+    width: 60%;
     height: 4px;
-    margin: 8px;
+    margin: 8px auto;;
     background: #fff;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+
+
 
 
 
@@ -165,7 +169,6 @@ nav {
     grid-column-gap: 5%;
     align-content: center;
     width: 100%;
-
     overflow: hidden;
 
 }
@@ -177,7 +180,7 @@ nav {
 }
 
 #logo {
-    width: 80%;
+    width: 65%;
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -502,7 +505,7 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     text-align: center;
     background: #00AE5A;
     padding: .1rem;
-    font-size: 3.7rem;
+    font-size: 3rem;
     font-weight: bolder;
 
 }
@@ -514,7 +517,7 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     text-align: center;
     background: grey;
     padding: .1rem;
-    font-size: 3.7rem;
+    font-size: 3rem;
     font-weight: bolder;
 
 }
@@ -624,15 +627,21 @@ footer img {
 
 @media only screen and (min-width: 767px) {
 
+    burger_icon{
+        margin: 0 auto;
+    }
+
     .burger_icon span {
 
-        width: 60%;
+        width: 40%;
         height: 7px;
-        margin: 8px;
+        margin: 8px auto;
         background: #fff;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+
+
 
 
     }
@@ -936,6 +945,11 @@ footer img {
 
 @media only screen and (min-width: 1000px) {
 
+    .burger_icon{
+        grid-column-start: 4;
+        grid-column-end: 4;
+    }
+
     .burger_icon span {
 
         width: 80%;
@@ -962,7 +976,7 @@ footer img {
     }
 
     #splash_img {
-        width: 120%;
+        width: 140%;
         overflow: hidden;
     }
 
@@ -990,7 +1004,7 @@ footer img {
     }
 
     #splash {
-        max-height: 1080px;
+        max-height: 900px;
 
     }
 
@@ -1392,14 +1406,19 @@ footer img {
 
 
 
-
+    .burger_icon span{
+        width: 50%;
+    }
     #logo img {
-        width: 30%;
+        width: 40%;
         grid-column-start: 1;
         grid-column-end: 1;
     }
 
+#splash {
+        max-height: 1080px;
 
+    }
 
 
     #splash_info h1 {
