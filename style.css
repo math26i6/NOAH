@@ -306,29 +306,165 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     padding: 1rem;
 }
 
-#earth {
-    display: grid;
-    align-content: center;
+#grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .viz_text{
+        font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #earth {
+        position: relative;
+        background-image: url(earth_PNG16.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30vw;
+        height: 30vw;
+        margin: 0 auto;
+    }
+
+    #co2{
+        position: absolute;
+        width: 100%;
+        top: 15vw;
+        margin-top: 0 auto;
+
+    }
+
+    .slidecontainer {
+        display: none;
+        width: 100%;
+        transition: 3s ease;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: #fafafa;
+        outline: none;
+        opacity: 0.7;
+        transition: 3s ease;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  appearance: none;
+    transition: 3s ease;
+  width: 65px;
+  height: 65px;
+  border: 1;
+  background: url('fly.png');
+    background-size: contain;
+  cursor: pointer;
 }
 
-#earth img {
-    width: 80%;
-    margin: 0 auto;
-}
+.slider::-moz-range-thumb {
 
-#dataviz {
-    display: grid;
-    position: relative;
-}
+    transition: 3s ease;
+  width: 65px;
+  height:65px;
+  border: 1;
+  background: url('fly.png');
+  cursor: pointer;
+    }
 
-#CO2 {
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 25%;
-    left: 32.5%;
-    font-size: 3rem;
-}
+button{
+        position: absolute;
+
+        width: 4vw;
+        height: 6vw;
+        background-color: rgba(255, 0, 0, 0);
+
+        cursor: pointer;
+        border: none;
+    }
+
+    button:hover{
+        opacity: 0.8;
+        transition: .3s ease;
+    }
+
+    button:hover p{
+        display: block;
+        color: white;
+    }
+
+    button p{
+        display: none;
+         font-size: 1rem;
+    }
+
+    #cairo{
+        bottom: 4.5vw;
+        right: 1.5vw;
+          background-image: url(egypt.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #moskva{
+        top: -15vw;
+        right: 4.5vw;
+           background-image: url(Rusland.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #newyork{
+        top: -10vw;
+        left: 4vw;
+           background-image: url(USA.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #accra{
+        top: 3vw;
+        right: 7vw;
+           background-image: url(Ghana.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #nuuk{
+        top: -16vw;
+        right: 14.5vw;
+           background-image: url(greenland.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    @keyframes pulse {
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(1.2);
+
+        }
+
+        100%{
+            transform: scale(1);
+
+        }
+    }
 
 .donate {
     background-color: #00AE5A;
