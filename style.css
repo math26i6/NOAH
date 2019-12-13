@@ -117,7 +117,7 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     margin: 0 auto;
     background: rgba(0, 174, 90, 0.10);
-    border-color: none;
+    border-color: rgba(0, 174, 90, 0.10);
 
 
 }
@@ -126,7 +126,8 @@ body {
 
     width: 60%;
     height: 4px;
-    margin: 8px auto;;
+    margin: 8px auto;
+    ;
     background: #fff;
 
 
@@ -182,7 +183,7 @@ nav {
     max-height: 667px;
 }
 
-#splash_img{
+#splash_img {
     width: 350%;
 }
 
@@ -302,169 +303,172 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 }
 
 #earth_txt p {
+    text-align: left;
     margin: 1rem;
     padding: 1rem;
 }
 
-#grid{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr;
-    }
+#grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
 
-    .viz_text{
-        font-size: 2.5rem;
-        font-family: 'Roboto', sans-serif;
-    }
+}
 
-    #earth {
-        position: relative;
-        background-image: url(earth_PNG16.webp);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 30vw;
-        height: 30vw;
-        margin: 0 auto;
-    }
+.viz_text {
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
 
-    #co2{
-        position: absolute;
-        width: 100%;
-        top: 15vw;
-        margin-top: 0 auto;
+#earth {
+    position: relative;
+    background-image: url(earth_PNG16.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+}
 
-    }
+#co2 {
+    position: absolute;
+    width: 100%;
+    top: 15vw;
+    margin-top: 0 auto;
 
-    .slidecontainer {
-        display: none;
-        width: 100%;
-        transition: 3s ease;
-    }
+}
 
-    .slider {
-        -webkit-appearance: none;
+.slidecontainer {
+    display: none;
+    width: 100%;
+    transition: 3s ease;
+}
 
-        width: 100%;
-        height: 10px;
-        border-radius: 5px;
-        background: #fafafa;
-        outline: none;
-        opacity: 0.7;
-        transition: 3s ease;
-        transition: opacity .2s;
-    }
+.slider {
+    -webkit-appearance: none;
 
-    .slider:hover {
-        opacity: 1;
-    }
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #fafafa;
+    outline: none;
+    opacity: 0.7;
+    transition: 3s ease;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 
-  appearance: none;
+    appearance: none;
     transition: 3s ease;
-  width: 65px;
-  height: 65px;
-  border: 1;
-  background: url('fly.png');
+    width: 65px;
+    height: 65px;
+    border: 1;
+    background: url('fly.png');
     background-size: contain;
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
 
     transition: 3s ease;
-  width: 65px;
-  height:65px;
-  border: 1;
-  background: url('fly.png');
-  cursor: pointer;
+    width: 65px;
+    height: 65px;
+    border: 1;
+    background: url('fly.png');
+    cursor: pointer;
+}
+
+#co2 button {
+    position: absolute;
+
+    width: 4vw;
+    height: 6vw;
+    background-color: rgba(255, 0, 0, 0);
+
+    cursor: pointer;
+    border: none;
+}
+
+#co2 button:hover {
+    opacity: 0.8;
+    transition: .3s ease;
+}
+
+#co2 button:hover p {
+    display: block;
+    color: white;
+}
+
+#co2 button p {
+    display: none;
+    font-size: 1rem;
+}
+
+#cairo {
+    bottom: 4.5vw;
+    right: 1.5vw;
+    background-image: url(egypt.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#moskva {
+    top: -15vw;
+    right: 4.5vw;
+    background-image: url(Rusland.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#newyork {
+    top: -10vw;
+    left: 4vw;
+    background-image: url(USA.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#accra {
+    top: 3vw;
+    right: 7vw;
+    background-image: url(Ghana.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#nuuk {
+    top: -16vw;
+    right: 14.5vw;
+    background-image: url(greenland.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
 
-button{
-        position: absolute;
-
-        width: 4vw;
-        height: 6vw;
-        background-color: rgba(255, 0, 0, 0);
-
-        cursor: pointer;
-        border: none;
-    }
-
-    button:hover{
-        opacity: 0.8;
-        transition: .3s ease;
-    }
-
-    button:hover p{
-        display: block;
-        color: white;
-    }
-
-    button p{
-        display: none;
-         font-size: 1rem;
-    }
-
-    #cairo{
-        bottom: 4.5vw;
-        right: 1.5vw;
-          background-image: url(egypt.png);
-        background-size: contain;
-        background-repeat: no-repeat;
+    50% {
+        transform: scale(1.2);
 
     }
 
-    #moskva{
-        top: -15vw;
-        right: 4.5vw;
-           background-image: url(Rusland.png);
-        background-size: contain;
-        background-repeat: no-repeat;
+    100% {
+        transform: scale(1);
 
     }
-
-    #newyork{
-        top: -10vw;
-        left: 4vw;
-           background-image: url(USA.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    #accra{
-        top: 3vw;
-        right: 7vw;
-           background-image: url(Ghana.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    #nuuk{
-        top: -16vw;
-        right: 14.5vw;
-           background-image: url(greenland.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-
-    }
-
-    @keyframes pulse {
-        0%{
-            transform: scale(1);
-        }
-
-        50%{
-            transform: scale(1.2);
-
-        }
-
-        100%{
-            transform: scale(1);
-
-        }
-    }
+}
 
 .donate {
     background-color: #00AE5A;
@@ -565,13 +569,26 @@ button{
     padding: 1rem;
 }
 
+#facts a {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5%;
+    align-content: center;
+    width: 100%;
+
+}
+
+#facts a:hover{
+    opacity: .7;
+}
+
+
+
 #facts img {
     width: 80%;
     margin: 0 auto;
     margin: 0 auto;
 }
-
-
 
 
 
@@ -774,7 +791,7 @@ footer img {
 
 @media only screen and (min-width: 767px) {
 
-    burger_icon{
+    burger_icon {
         margin: 0 auto;
     }
 
@@ -1021,7 +1038,7 @@ footer img {
         margin-bottom: 1rem;
     }
 
-      .icon:nth-child(1) img {
+    .icon:nth-child(1) img {
         width: 30%;
     }
 
@@ -1096,12 +1113,12 @@ footer img {
 
 @media only screen and (min-width: 1000px) {
 
-    .burger_icon{
+    .burger_icon {
         grid-column-start: 4;
         grid-column-end: 4;
     }
 
-    .burgermenu{
+    .burgermenu {
         font-size: 2.3rem;
     }
 
@@ -1144,11 +1161,11 @@ footer img {
     .so_me {
         grid-column-gap: 4%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 5%;
         align-content: center;
         justify-content: center;
-        margin-left:5rem;
+        margin-left: 5rem;
         right: 0;
         width: 60%;
         padding: 1rem;
@@ -1561,20 +1578,21 @@ footer img {
 
 
 
-    .burger_icon span{
+    .burger_icon span {
         width: 50%;
     }
+
     #logo img {
         width: 40%;
         grid-column-start: 1;
         grid-column-end: 1;
     }
 
-    .burgermenu{
+    .burgermenu {
         font-size: 4rem;
     }
 
-#splash {
+    #splash {
         max-height: 1080px;
 
     }
