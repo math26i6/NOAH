@@ -79,6 +79,7 @@ function showJson() {
                 slider.value = dest.gsx$slidervalue.$t;
                 tid.innerHTML = dest.gsx$timer.$t;
                 tid2.innerHTML = dest.gsx$kvarter.$t
+                tog.innerHTML = Math.round(slider.value/4*2794);
                 //        ændre 500 til en json værdi
             })
 
@@ -89,6 +90,7 @@ function showJson() {
                 slider.value = dest.gsx$slidervalue.$t;
                 tid.innerHTML = dest.gsx$timer.$t;
                 tid2.innerHTML = dest.gsx$kvarter.$t
+                tog.innerHTML = Math.round(slider.value/4*2794);
             })
 
         } else if (i === 2) {
@@ -98,6 +100,7 @@ function showJson() {
                 slider.value = dest.gsx$slidervalue.$t;
                 tid.innerHTML = dest.gsx$timer.$t;
                 tid2.innerHTML = dest.gsx$kvarter.$t
+                tog.innerHTML = Math.round(slider.value/4*2794);
             })
 
         } else if (i === 3) {
@@ -107,6 +110,7 @@ function showJson() {
                 slider.value = dest.gsx$slidervalue.$t;
                 tid.innerHTML = dest.gsx$timer.$t;
                 tid2.innerHTML = dest.gsx$kvarter.$t
+                tog.innerHTML = Math.round(slider.value/4*2794);
             })
 
         } else {
@@ -116,6 +120,7 @@ function showJson() {
                 slider.value = dest.gsx$slidervalue.$t;
                 tid.innerHTML = dest.gsx$timer.$t;
                 tid2.innerHTML = dest.gsx$kvarter.$t
+                tog.innerHTML = Math.round(slider.value/4*2794);
             })
 
 
