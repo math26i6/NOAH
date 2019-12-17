@@ -45,7 +45,7 @@
             <a href="#splash" onclick="myFunction()">
                 <p>FORSIDE</p>
             </a>
-            <a href="#menu" onclick="myFunction()">
+            <a href="#arrow" onclick="myFunction()">
                 <p>FLYFART</p>
             </a>
             <a href="#staygrounded" onclick="myFunction()">
@@ -54,7 +54,7 @@
             <a href="#fakta" onclick="myFunction()">
                 <p>FAKTA</p>
             </a>
-            <a href="#cta_icons" onclick="myFunction()">
+            <a href="#cta_info" onclick="myFunction()">
                 <p>HJÆLP OS</p>
             </a>
         </div>
@@ -69,7 +69,7 @@
             <a href="http://www.noah.dk/st%C3%B8t">
                 <div id="donate_front">STØT NU</div>
             </a>
-            <a href="#earth_txt">
+            <a href="#arrow">
                 <div id="arrow">⇩</div>
             </a>
         </section>
@@ -86,7 +86,7 @@
         <div id="earth_txt">
             <h1> Hvor meget udleder du? </h1>
             <p>Alle der har taget et fly til en feriedestination ved at det er nemt, hurtigt og for det meste smertefrit. Problemet ligger i at fly er verdens mest forurenende transportform. De udgør en kæmpe trussel for miljø og klima, da de udleder en kæmpe del af vores årlige CO2 udslip når det kommer til transport. <br> <br>
-                På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. Klik på dem og se hvor meget du ville udlede på den tur.
+               <span style="color: #00e275;"> På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. Klik på dem og se hvor meget du ville udlede på den tur.</span>
             </p>
 
         </div>
@@ -130,8 +130,14 @@
                     </div>
 
                 </div>
-                <p class="viz_text"><span id="ton"></span> kg CO2 </p>
-                <p class="viz_text"><span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
+                <div id="grid_text">
+                <p class="viz_text">CO2 udledt på rejsen: <span id="ton"></span> kg CO2 </p>
+                <p class="viz_text">Rejse tid: <span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
+                <p class="viz_text">For samme mængde CO2 kan du rejse <span id="tog"></span> km i tog </p>
+                </div>
+<!--                <img style="width: 10%; display: block; margin: 2rem auto;" src="pics/iconerseb-07.png" alt="">-->
+                <div class="earth_sky_left"></div>
+                <div class="earth_sky_right"></div>
             </div>
 
 
@@ -197,14 +203,16 @@
             <div id="facts">
                 <div id="fact_txt">
                     <h1>Hvem er NOAH?</h1>
-                    <p>NOAH arbejder for, at alle nulevende og fremtidige generationer skal have lige adgang til jordens ressourcer - uden at miljøet overbelastes. Det kalder vi for miljøretfærdighed, og vi arbejder hver dag på at komme dette nærmere gennem vores miljøpolitiske programmer. NOAH sørger for at miljøet kommer i først række, og at vi alle står sammen for at skabe en bedre fremtid for de kommende generationer. </p>
+                    <p>NOAH arbejder for, at alle nulevende og fremtidige generationer skal have lige adgang til jordens ressourcer - uden at miljøet overbelastes. Det kalder vi for miljøretfærdighed, og vi arbejder hver dag på at komme dette nærmere gennem vores miljøpolitiske programmer. NOAH sørger for at miljøet kommer i først række, og at vi alle står sammen for at skabe en bedre fremtid for de kommende generationer. <br><span style="color: #00e275;">
+                            Klik på billedet for at få mere at vide.</span></p>
                 </div>
                 <a href="http://noah.dk"><img class="click_fade" src="pics/om_noah.jpg" alt=""></a>
                 <div id="fact_txt">
                     <h1>Hvorfor støtte NOAH?</h1>
                     <p>Når du støtter NOAH i kampen mod flyfart, støtter du vel organiseret og velstruktureret organisation som yder deres ypperste for at skabe opsigt omkring klimaet, samt sørge for at klimakrisen bliver hørt af dem der kan gøre noget ved det!
                         Ved at støtte os underskriver du samtidig for at udvidelsen af Kastrup lufthavn skal stoppes. <br><br>
-                        Klik på billedet for at se hvor slemt fly fart faktisk er.
+                        <span style="color: #00e275;">
+                            Klik på billedet for at se hvor slemt fly fart faktisk er.</span>
                     </p>
                 </div>
 

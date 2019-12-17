@@ -13,6 +13,7 @@ var slider = document.getElementById("myRange");
 var co2 = document.getElementById("ton");
 var tid = document.getElementById("timer");
 var tid2 = document.getElementById("minutter");
+var tog = document.getElementById("tog");
 
 var theJson;
 
@@ -56,6 +57,7 @@ slider.oninput = function () {
     co2.innerHTML = Math.round(this.value / 4 * 109);
     tid.innerHTML = timer;
     tid2.innerHTML = minutter;
+    tog.innerHTML = Math.round(this.value/4*2794);
 }
 
 //    ændrer valuen på tryk
