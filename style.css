@@ -12,10 +12,37 @@ body {
     margin: 0;
     background: linear-gradient(#2C6B9A, #204b6a);
     font-family: 'roboto', sans-serif;
+    text-decoration: none;
 
 
 
 }
+
+a{
+    text-decoration: none;
+}
+
+.hide{
+    display: none;
+}
+
+.loading{
+    background: #2C6B9A;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.loading_ani{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 13rem auto 2rem auto;
+    z-index: 200;
+}
+
+
 
 .container {
     display: inline-block;
@@ -311,12 +338,12 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 #grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr .1fr .1fr;
 
 }
 
 .viz_text {
-    font-size: 2.5rem;
+    font-size: 5vw;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -329,6 +356,10 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     width: 30vw;
     height: 30vw;
     margin: 0 auto;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+
 }
 
 #co2 {
@@ -356,7 +387,10 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     opacity: 0.7;
     transition: 3s ease;
     transition: opacity .2s;
+    position: absolute;
+    top: 50%;
 }
+
 
 .slider:hover {
     opacity: 1;
@@ -372,7 +406,10 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     border: 1;
     background: url('fly.png');
     background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
+
+
 }
 
 .slider::-moz-range-thumb {
@@ -387,9 +424,6 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 
 #co2 button {
     position: absolute;
-
-    width: 4vw;
-    height: 6vw;
     background-color: rgba(255, 0, 0, 0);
 
     cursor: pointer;
@@ -578,7 +612,7 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 
 }
 
-#facts a:hover{
+#facts a:hover {
     opacity: .7;
 }
 
@@ -784,6 +818,47 @@ footer img {
 
 
 
+#earth {
+    margin: 0 auto;
+    width: 70vw;
+    height: 70vw;
+}
+
+#co2 {
+    top: 30vw;
+}
+
+button {
+    width: 9vw;
+    height: 15vw;
+}
+
+#newyork {
+    top: -22vw;
+    left: 10vw;
+}
+
+#nuuk {
+    top: -35vw;
+    right: 30.5vw;
+}
+
+#accra {
+    top: 7vw;
+    right: 18vw;
+}
+
+#cairo {
+    top: 8vw;
+    right: 5.5vw;
+}
+
+#moskva {
+    top: -30vw;
+    right: 7vw;
+}
+
+
 /*ANIMATIONS*/
 
 
@@ -946,10 +1021,10 @@ footer img {
         background-size: cover;
         width: 100%;
         height: 30%;
-        padding: 8rem 0 10rem 0;
+        padding: 5rem 0 10rem 0;
         text-shadow: 2px 2px rgba(0, 0, 0, 0.42);
 
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0 auto;
 
     }
@@ -1137,6 +1212,23 @@ footer img {
     }
 
 
+.loading{
+    background: #2C6B9A;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.loading_ani{
+    display: block;
+    width: 80%;
+    margin: 8rem auto 2rem auto;
+    z-index: 200;
+}
+
+
+
     nav {
         position: fixed;
         display: grid;
@@ -1255,12 +1347,49 @@ footer img {
     }
 
 
+.viz_text {
+    font-size: 2.5vw;
+}
+
 
     #earth {
-        display: grid;
-        align-content: center;
+        margin: 0 auto;
+        width: 40vw;
+        height: 40vw;
+    }
 
+    #co2 {
+        top: 30vw;
+    }
 
+    button {
+        width: 4vw;
+        height: 7vw;
+    }
+
+    #newyork {
+        top: -22vw;
+        left: 5vw;
+    }
+
+    #nuuk {
+        top: -30vw;
+        right: 20vw;
+    }
+
+    #accra {
+        top: -10vw;
+        right: 7vw;
+    }
+
+    #cairo {
+        top: -7vw;
+        right: 2vw;
+    }
+
+    #moskva {
+        top: -27vw;
+        right: 7vw;
     }
 
     #earth img {
@@ -1301,7 +1430,7 @@ footer img {
     /*VIDEO*/
 
     #staygrounded {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -1313,7 +1442,7 @@ footer img {
         background-size: contain;
         width: 40%;
         height: 30%;
-        padding: 8rem 0 9rem 0;
+        padding: 5rem 0 9rem 0;
         text-shadow: 2px 2px rgba(0, 0, 0, 0.42);
         font-size: 3rem;
         margin: 0 auto;
@@ -1322,7 +1451,9 @@ footer img {
 
     #video_grid {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-column-gap: 2vw;
+        grid-template-columns: 1fr 3fr 1fr;
+        justify-content: center;
     }
 
     #video_grid video {
@@ -1336,9 +1467,14 @@ footer img {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        align-content: center;
+        align-content: flex-start;
 
     }
+    .column:nth-child(2) {
+      margin: 2vw
+
+    }
+
 
     .column img {
         width: 80%;
@@ -1410,6 +1546,7 @@ footer img {
         width: 90%;
         overflow: hidden;
         margin: 2rem auto;
+        background: green;
     }
 
 
@@ -1589,7 +1726,7 @@ footer img {
     }
 
     .burgermenu {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     #splash {
@@ -1627,6 +1764,8 @@ footer img {
 
 
     }
+
+
 
 
     /*DATAVIZ*/
@@ -1732,11 +1871,6 @@ footer img {
     #information p {
         font-size: 2rem;
     }
-
-
-
-
-
 }
 
 

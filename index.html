@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
     <main>
         <!----------------------------------------NAV START--------------------------->
+        <div class="loading"><img class="loading_ani" src="Logo%20animation_3.gif" alt=""></div>
         <nav>
             <div id="logo">
-                <img src="pics/noah%20logo.png" alt="">
+                <a href="http://www.noah.dk"> <img src="pics/noah%20logo.png" alt=""></a>
 
 
             </div>
@@ -39,19 +42,19 @@
         </nav>
 
         <div class="burgermenu luk fade_out">
-            <a href="#splash" onclick="lukMenu()">
+            <a href="#splash" onclick="myFunction()">
                 <p>FORSIDE</p>
             </a>
-            <a href="#menu" onclick="lukMenu()">
+            <a href="#menu" onclick="myFunction()">
                 <p>FLYFART</p>
             </a>
-            <a href="#staygrounded" onclick="lukMenu()">
+            <a href="#staygrounded" onclick="myFunction()">
                 <p>#STAYGROUNDED</p>
             </a>
-            <a href="#fakta" onclick="lukMenu()">
+            <a href="#fakta" onclick="myFunction()">
                 <p>FAKTA</p>
             </a>
-            <a href="#cta_icons" onclick="lukMenu()">
+            <a href="#cta_icons" onclick="myFunction()">
                 <p>HJÆLP OS</p>
             </a>
         </div>
@@ -63,7 +66,9 @@
                 <h1>FLYTRAKIFFEN <br> I DANMARK <br> ER PÅ SIT HØJESTE <br> NOGENSINDE</h1>
                 <p>I 2018 steg antallet af afrejsende flypassagerer fra de danske lufthavne til 18,2 mio., hvoraf 90 pct. fløj internationalt. Det samlede passagerantal var 706.000 eller 4 pct. højere end i 2017. Det er det største antal passagerer fra danske lufthavne nogensinde. </p>
             </div>
-            <div id="donate_front">STØT NU</div>
+            <a href="http://www.noah.dk/st%C3%B8t">
+                <div id="donate_front">STØT NU</div>
+            </a>
             <a href="#earth_txt">
                 <div id="arrow">⇩</div>
             </a>
@@ -81,55 +86,58 @@
         <div id="earth_txt">
             <h1> Hvor meget udleder du? </h1>
             <p>Alle der har taget et fly til en feriedestination ved at det er nemt, hurtigt og for det meste smertefrit. Problemet ligger i at fly er verdens mest forurenende transportform. De udgør en kæmpe trussel for miljø og klima, da de udleder en kæmpe del af vores årlige CO2 udslip når det kommer til transport. <br> <br>
-På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. Klik på dem og se hvor meget du ville udlede på den tur.
-</p>
+                På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. Klik på dem og se hvor meget du ville udlede på den tur.
+            </p>
+
         </div>
 
         <section id="dataviz">
-        <div id="grid">
-            <p class="viz_text">kg co2 <span id="ton"></span></p>
-            <div id="earth">
+            <div id="grid">
 
-                <div id="co2">
+                <div id="earth">
 
-                    <button id="cairo">
-                        <p class="viz_tekst">Cairo</p>
-                    </button>
+                    <div id="co2">
 
-                    <button id="moskva">
-                        <p class="viz_tekst">Moskva</p>
-                    </button>
+                        <button id="cairo">
+                            <p class="viz_tekst">Cairo</p>
+                        </button>
 
-                    <button id="newyork">
-                        <p class="viz_tekst">New York</p>
-                    </button>
-                    <button id="accra">
-                        <p class="viz_tekst">Accra</p>
-                    </button>
-                    <button id="nuuk">
-                        <p class="viz_tekst">Nuuk</p>
-                    </button>
+                        <button id="moskva">
+                            <p class="viz_tekst">Moskva</p>
+                        </button>
+
+                        <button id="newyork">
+                            <p class="viz_tekst">New York</p>
+                        </button>
+                        <button id="accra">
+                            <p class="viz_tekst">Accra</p>
+                        </button>
+                        <button id="nuuk">
+                            <p class="viz_tekst">Nuuk</p>
+                        </button>
 
 
 
+
+
+
+
+
+
+                    </div>
                     <div class="slidecontainer">
                         <input type="range" min="2" max="32" value="" class="slider" id="myRange">
                     </div>
 
-
-
-
-
                 </div>
-
-
+                <p class="viz_text"><span id="ton"></span> kg CO2 </p>
+                <p class="viz_text"><span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
             </div>
 
-            <p class="viz_text"><span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
-        </div>
 
-
-            <div class="donate">STØT NU</div>
+            <a href="http://www.noah.dk/st%C3%B8t">
+                <div class="donate">STØT NU</div>
+            </a>
 
         </section>
 
@@ -140,25 +148,29 @@ På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. 
 
 
         <!----------------------------------------VIDEO START--------------------------->
-        <div class="skyheader">
-            <h1>#STAYGROUNDED</h1>
-        </div>
         <section id="staygrounded">
+            <div class="skyheader">
+                <h1>#STAYGROUNDED</h1>
+            </div>
+
+
             <div id="video_grid">
                 <div class="column">
-                    <img src="img/earthpiechartgif.gif" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores maiores commodi iste soluta perferendis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos nobis facere, ut perspiciatis necessitatibus architecto a dolore, laborum ab illo modi doloribus alias voluptas similique accusamus explicabo iusto. Fugit.</p>
+                    <h1 style="text-align: center;">Udleder for meget</h1>
+                    <img src="img/earthpiechartgif.gif" alt="" style="overflow: hidden; width: 105%;">
+                    <p>Flyfart udleder alene i Danmark 36% af det årlige CO2 udslip, når det kommer til transport. </p>
                 </div>
 
                 <div id="video">
-                    <video src="video/y2mate.com%20-%20billie_eilish_bad_guy_DyDfgMOUjCI_720p.mp4" controls></video>
+                    <video src="video/NOAH%20-%20#STAYGROUNDED%20UPDATEDv2.mp4" controls></video>
 
                 </div>
 
 
                 <div class="column">
-                    <img src="pics/earthtrain-04.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatem, quia Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sed atque sequi placeat recusandae culpa cum tenetur iste minima eligendi at, aliquid adipisci. Quia quos doloremque accusantium odio asperiores, voluptatum.</p>
+                    <h1 style="text-align: center;">Kommer længere</h1>
+                    <img style="width: 70%" src="pics/earthtrain-04.png" alt="">
+                    <p>En flytur tur-retur til New York vil udlede den samme mængde CO2 som en tog tur halvanden gang rundt om jorden!</p>
                 </div>
             </div>
 
@@ -181,20 +193,19 @@ På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. 
                 <h1>NEDSÆT DIT FLYFORBRUG</h1>
             </div>
             <div id="sub_txt">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa dignissimos repellendus temporibus optio atque in consequuntur reprehenderit qui cumque laboriosam, nesciunt odit aut sit distinctio ex aspernatur? Excepturi, dignissimos.</p>
             </div>
             <div id="facts">
                 <div id="fact_txt">
-                    <h1>Fact 1</h1>
+                    <h1>Hvem er NOAH?</h1>
                     <p>NOAH arbejder for, at alle nulevende og fremtidige generationer skal have lige adgang til jordens ressourcer - uden at miljøet overbelastes. Det kalder vi for miljøretfærdighed, og vi arbejder hver dag på at komme dette nærmere gennem vores miljøpolitiske programmer. NOAH sørger for at miljøet kommer i først række, og at vi alle står sammen for at skabe en bedre fremtid for de kommende generationer. </p>
                 </div>
                 <a href="http://noah.dk"><img class="click_fade" src="pics/om_noah.jpg" alt=""></a>
                 <div id="fact_txt">
-                    <h1>Fact 2</h1>
+                    <h1>Hvorfor støtte NOAH?</h1>
                     <p>Når du støtter NOAH i kampen mod flyfart, støtter du vel organiseret og velstruktureret organisation som yder deres ypperste for at skabe opsigt omkring klimaet, samt sørge for at klimakrisen bliver hørt af dem der kan gøre noget ved det!
-Ved at støtte os underskriver du samtidig for at udvidelsen af Kastrup lufthavn skal stoppes. <br><br>
-Klik på billedet til højre for at se hvor slemt fly fart faktisk er.
-</p>
+                        Ved at støtte os underskriver du samtidig for at udvidelsen af Kastrup lufthavn skal stoppes. <br><br>
+                        Klik på billedet for at se hvor slemt fly fart faktisk er.
+                    </p>
                 </div>
 
                 <a href="http://philipsengraphics.dk/kea/a_frame_ngo/aframe.html?fbclid=IwAR2XdpMz4s4gEbbkpHKYrrpfQH1FYKg02FNM_zycC7FfJ799oQO6eLD1fnE"><img class="click_fade" src="pics/Screenshot%202019-12-13%20at%2011.00.40.png" alt=""></a>
@@ -224,35 +235,40 @@ Klik på billedet til højre for at se hvor slemt fly fart faktisk er.
                 <div class="icon">
                     <img src="pics/iconerseb-08.png" alt="">
                     <h1>Snak med andre</h1>
-                    <p>For at skabe mere opsigt omkring flyfarten i verden så snak med andre om det. Snak om hvad i kan gøre for at stoppe jeres eget aftryk på miljøet, og hvordan i kan undgå at flyve i fremtiden.  </p>
+                    <p>For at skabe mere opsigt omkring flyfarten i verden så snak med andre om det. Snak om hvad i kan gøre for at stoppe jeres eget aftryk på miljøet, og hvordan i kan undgå at flyve i fremtiden. </p>
                 </div>
                 <div class="icon">
                     <img src="pics/iconerseb-02.png" alt="">
                     <h1>Sammen er vi stærke</h1>
-                    <p>En person har ikke meget mulighed for at ændre folks holdninger og rutiner. Men hvis man er sammen om det og enige om at der skal gøres noget ved problemet, kan vi sammen nedsætte fly forbruget i Danmark. Alene kan man løfte en sten, sammen kan man flytte bjerge.  </p>
+                    <p>En person har ikke meget mulighed for at ændre folks holdninger og rutiner. Men hvis man er sammen om det og enige om at der skal gøres noget ved problemet, kan vi sammen nedsætte fly forbruget i Danmark. Alene kan man løfte en sten, sammen kan man flytte bjerge. </p>
                 </div>
                 <div class="icon">
                     <img src="pics/iconerseb-06.png" alt="">
                     <h1>Forklar andre om NOAH</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis porro necNOAH har eksisteret i over 50 år, men der er stadig en del der ikke kender til vores budskaber og interesse for klimaet og miljøet. Netop derfor er det vigtigt for os at budskabet bliver delt ud, så de nye generationer kan hjælpe til. NOAH råder derfor til at man tager fat i sin arbejdsgiver og prøver at overbevise dem om hvorfor de skal indgå en “nul-fly-aftale” med NOAH så vi kan komme et skridt tættere på et nedsænket CO2 udslip. </p>
+                    <p>
+                        NOAH har eksisteret i over 50 år, men der er stadig en del der ikke kender til vores budskaber og interesse for klimaet og miljøet. Netop derfor er det vigtigt for os at budskabet bliver delt ud, så de nye generationer kan hjælpe til. NOAH råder derfor til at man tager fat i sin arbejdsgiver og prøver at overbevise dem om hvorfor de skal indgå en “nul-fly-aftale” med NOAH så vi kan komme et skridt tættere på et nedsænket CO2 udslip. </p>
                 </div>
 
             </div>
             <div id="icon_train">
                 <img src="pics/iconerseb-07.png" alt="">
                 <h1>Brug toget</h1>
-                <p>Toget er et transportmiddel der er begyndt at blive mere og mere moderne. Fænomenet ved navn “interrail” er noget som mange unge gør brug af, og er noget som vi i NOAH er utrolig glade for er blevet en “trend”. Toget er nemlig det transportmiddel i verden der udleder mindst CO2. Man nemlig kan tage toget 17 gange i stedet for fly.  <br>
-Men er det nu også sandt, at toget er det mest miljøvenlige transportvalg – altså ud over cykel og gåben. I DSBs årlige miljørapport viser beregninger, at toget udleder ca. 36 g CO2 (pr. personkilometer), mens biler og fly begge udleder over 100 g CO2.
-Hjemmesider som f.eks. “www.bahn.de” er også med til at gøre det nemmere for os at rejse med toget, og på tværs af forskellige lande. Der er mange måder at rejse på, men tog er helt klart den som NOAH står bag. Rejs som os.
-</p>
+                <p>Toget er et transportmiddel der er begyndt at blive mere og mere moderne. Fænomenet ved navn “interrail” er noget som mange unge gør brug af, og er noget som vi i NOAH er utrolig glade for er blevet en “trend”. Toget er nemlig det transportmiddel i verden der udleder mindst CO2. Man nemlig kan tage toget 17 gange i stedet for fly. <br> <br>
+                    Men er det nu også sandt, at toget er det mest miljøvenlige transportvalg – altså ud over cykel og gåben. I DSBs årlige miljørapport viser beregninger, at toget udleder ca. 36 g CO2 (pr. personkilometer), mens biler og fly begge udleder over 100 g CO2.
+                    Hjemmesider som f.eks. “www.bahn.de” er også med til at gøre det nemmere for os at rejse med toget, og på tværs af forskellige lande. Der er mange måder at rejse på, men tog er helt klart den som NOAH står bag. Rejs som os.
+                </p>
             </div>
             <div class="skyheader">
-                <h1>REJS MED OS</h1>
+                <h1>REJS SOM OS</h1>
             </div>
 
             <div id="ctas">
-                <div class="donate_bottom">STØT OS</div>
-                <div class="donate_medlem">BLIV MEDLEM</div>
+                <a href="http://www.noah.dk/st%C3%B8t">
+                    <div class="donate_bottom">STØT OS</div>
+                </a>
+                <a href="https://noah.dk/aktiv">
+                    <div class="donate_medlem">BLIV MEDLEM</div>
+                </a>
             </div>
 
             <h1></h1>
@@ -280,9 +296,17 @@ Hjemmesider som f.eks. “www.bahn.de” er også med til at gøre det nemmere f
 
     </main>
 
-    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"ac096e29f47237375be7de65d","lid":"8175c2a18c","uniqueMethods":true}) })</script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">
+        window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {
+            L.start({
+                "baseUrl": "mc.us4.list-manage.com",
+                "uuid": "ac096e29f47237375be7de65d",
+                "lid": "8175c2a18c",
+                "uniqueMethods": true
+            })
+        })
+    </script>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

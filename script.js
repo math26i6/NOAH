@@ -19,13 +19,22 @@ var theJson;
 document.addEventListener("DOMContentLoaded", getList);
 
 
+function startTimer(){
+
+
+  setTimeout(function(){  document.querySelector(".loading").classList.add("fade_out"); }, 2700);
+    setTimeout(function(){  document.querySelector(".loading").classList.add("hide"); }, 3000);
+
+
+}
+
 async function getList() {
     let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1T7QLxXy3YAkULDdFjzzs8l9kez4-OnIH1FowfuraoSI/od6/public/values?alt=json");
     theJson = await jsonData.json();
     console.log("hej");
     console.log(theJson);
     showJson();
-
+    startTimer();
 }
 
 
