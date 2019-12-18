@@ -96,7 +96,7 @@ a {
     width: 100%;
     height: 100%;
     z-index: 2;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: 0.5s;
 }
 
@@ -1258,7 +1258,7 @@ button {
     }
 
     .burgermenu {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .burger_icon span {
@@ -1589,6 +1589,11 @@ button {
         display: grid;
         margin: 0 auto;
         width: 100%;
+    }
+
+    iframe{
+        width: 420 ;
+        height: 345;
     }
 
 
