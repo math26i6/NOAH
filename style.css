@@ -527,7 +527,7 @@ https://codepen.io/erikterwan/pen/EVzeRP/
 }
 
 #accra {
-    top: 3vw;
+    top: 5vw;
     right: 7vw;
     background-image: url(Ghana.png);
     background-size: contain;
@@ -913,8 +913,8 @@ button {
 }
 
 #cairo {
-    top: 8vw;
-    right: 5.5vw;
+        top: -13vw;
+    right: 2vw;
 }
 
 #moskva {
@@ -1471,7 +1471,7 @@ button {
     }
 
     .viz_text {
-        font-size: 1.5vw;
+        font-size: 1vw;
         padding: .5rem;
 
     }

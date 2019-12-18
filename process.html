@@ -5,248 +5,434 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <style>
-#grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr .1fr ;
+    <link rel="stylesheet" href="">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-}
+</head>
 
-.viz_text {
-
-    font-size: 3vw;
-    margin: 0;
-}
-
- #grid_text {
-
-
-        margin: 1rem;
-        padding: 1rem;
-     width: 60%;
-     margin: 2rem auto;
-
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(#2C6B9A, #0b1b26);
         text-align: center;
-        background: #00A05A;
-        border-radius: 0px;
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        color: white;
+
     }
 
-#earth {
-    position: relative;
-    background-image: url(earth_PNG16.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30vw;
-    height: 30vw;
-    margin: 0 auto;
+    main{
 
-    grid-row-start: 1;
-    grid-row-end: 1;
+    }
 
 
-}
+    #grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
 
-#co2 {
-    position: absolute;
-    width: 100%;
-    top: 15vw;
-    margin-top: 0 auto;
+    .viz_text{
+        font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
+    }
 
-}
+    #earth {
+        position: relative;
+        background-image: url(earth_PNG16.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30vw;
+        height: 30vw;
+        margin: 0 auto;
+    }
 
-.slidecontainer {
-    display: none;
-    width: 100%;
-    transition: 3s ease;
-}
+    #co2{
+        position: absolute;
+        width: 100%;
+        top: 15vw;
+        margin-top: 0 auto;
 
-.slider {
-    -webkit-appearance: none;
+    }
 
-    width: 100%;
-    height: 10px;
-    border-radius: 5px;
-    background: #fafafa;
-    outline: none;
-    opacity: 0.7;
-    transition: 3s ease;
-    transition: opacity .2s;
-    position: absolute;
-    top: 50%;
-}
+    .slidecontainer {
+        display: none;
+        width: 100%;
+        transition: 3s ease;
+    }
 
+    .slider {
+        -webkit-appearance: none;
 
-.grid_text {
-    display: block;
-}
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: #fafafa;
+        outline: none;
+        opacity: 0.7;
+        transition: 3s ease;
+        transition: opacity .2s;
+    }
 
-.slider:hover {
-    opacity: 1;
-}
+    .slider:hover {
+        opacity: 1;
+    }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 
-    appearance: none;
+  appearance: none;
     transition: 3s ease;
-    width: 65px;
-    height: 65px;
-    border: 1;
-    background: url('fly.png');
+  width: 65px;
+  height: 65px;
+  border: 1;
+  background: url('fly.png');
     background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
 
     transition: 3s ease;
-    width: 65px;
-    height: 65px;
-    border: 1;
-    background: url('fly.png');
-    cursor: pointer;
-}
+  width: 65px;
+  height:65px;
+  border: 1;
+  background: url('fly.png');
+  cursor: pointer;
+    }
 
-#co2 button {
-    position: absolute;
-    background-color: rgba(255, 0, 0, 0);
+button{
+/*
+animation: pulse;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+*/
+        position: absolute;
 
-    cursor: pointer;
-    border: none;
-}
+        width: 4vw;
+        height: 6vw;
+        background-color: rgba(255, 0, 0, 0);
 
-#co2 button:hover {
-    opacity: 0.8;
-    transition: .3s ease;
-}
+        cursor: pointer;
+        border: none;
+    }
 
-#co2 button:hover p {
-    display: block;
-    color: white;
-}
+    button:hover{
+        opacity: 0.8;
+        transition: .3s ease;
+    }
 
-#co2 button p {
-    display: none;
-    font-size: 1rem;
-}
+    button:hover p{
+        display: block;
+        color: white;
+    }
+
+    button p{
+        display: none;
+         font-size: 1rem;
+    }
+
+    #cairo{
+        bottom: 2.5vw;
+        right: 1.5vw;
+          background-image: url(egypt.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #moskva{
+        top: -15vw;
+        right: 4.5vw;
+           background-image: url(Rusland.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    #newyork{
+        top: -10vw;
+        left: 4vw;
+           background-image: url(USA.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #accra{
+        top: 3vw;
+        right: 7vw;
+           background-image: url(Ghana.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #nuuk{
+        top: -16vw;
+        right: 14.5vw;
+           background-image: url(greenland.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    @keyframes pulse {
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(1.2);
+
+        }
+
+        100%{
+            transform: scale(1);
+
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #grid{
+            grid-template-columns: 1fr;
+        }
+
+        #earth{
+            width: 70vw;
+            height: 70vw;
+        }
+
+        #co2{
+            top: 30vw;
+        }
+
+        button{
+            width: 12vw;
+            height: 20vw;
+        }
+
+        #newyork{
+            top: -22vw;
+            left: 10vw;
+        }
+
+        #nuuk{
+             top: -35vw;
+        right: 30.5vw;
+        }
+#accra {
+             top: 7vw;
+        right: 18vw;
+        }
 
 #cairo {
-    bottom: 4.5vw;
-    right: 1.5vw;
-    background-image: url(egypt.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+             top: 8vw;
+        right: 5.5vw;
+        }
+#moskva{
+             top: -30vw;
+        right: 7vw;
+        }
 
 }
 
-#moskva {
-    top: -15vw;
-    right: 4.5vw;
-    background-image: url(Rusland.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-#newyork {
-    top: -10vw;
-    left: 4vw;
-    background-image: url(USA.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#accra {
-    top: 3vw;
-    right: 7vw;
-    background-image: url(Ghana.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#nuuk {
-    top: -16vw;
-    right: 14.5vw;
-    background-image: url(greenland.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-
-    }
-
-    100% {
-        transform: scale(1);
-
-    }
-}
-    </style>
-</head>
+</style>
 
 <body>
-    <div id="process_grid">
+    <main>
+
+           <h1 style="font-size: 5vw">PROCESS SITE</h1>
+           <p>Velkommen til gruppe 8's process site! <br> Scroll ned af siden og se alt det content vi har fået lavet igennem projektet</p>
+
+           <h1>DATAVIZ</h1>
+
+        <div id="grid">
+            <p class="viz_text">kg co2 <span id="ton"></span></p>
+            <div id="earth">
+
+                <div id="co2">
+
+                    <button id="cairo">
+                        <p class="viz_tekst">Cairo</p>
+                    </button>
+
+                    <button id="moskva">
+                        <p class="viz_tekst">Moskva</p>
+                    </button>
+
+                    <button id="newyork">
+                        <p class="viz_tekst">New York</p>
+                    </button>
+                    <button id="accra">
+                        <p class="viz_tekst">Accra</p>
+                    </button>
+                    <button id="nuuk">
+                        <p class="viz_tekst">Nuuk</p>
+                    </button>
 
 
-        <div id="earth">
 
-            <div id="co2">
-
-                <button id="cairo">
-                    <p class="viz_tekst">Cairo</p>
-                </button>
-
-                <button id="moskva">
-                    <p class="viz_tekst">Moskva</p>
-                </button>
-
-                <button id="newyork">
-                    <p class="viz_tekst">New York</p>
-                </button>
-                <button id="accra">
-                    <p class="viz_tekst">Accra</p>
-                </button>
-                <button id="nuuk">
-                    <p class="viz_tekst">Nuuk</p>
-                </button>
+                    <div class="slidecontainer">
+                        <input type="range" min="2" max="32" value="" class="slider" id="myRange">
+                    </div>
 
 
 
 
 
-
-
+                </div>
 
 
             </div>
-            <div class="slidecontainer">
-                <input type="range" min="2" max="32" value="" class="slider" id="myRange">
-            </div>
 
+            <p class="viz_text"><span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
+        </div>
+
+        <div style="margin: 0 auto" id="video">
+            <h1>KAMPANGE VIDEO</h1>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/K1TkoCadRSI?autoplay=1">
+            </iframe>
 
         </div>
-    </div>
+           <div style="margin: 0 auto" id="video">
+            <h1>PROCESS VIDEO</h1>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/I8Th62-P8Xc">
+            </iframe>
 
-    <script>
+        </div>
+         <div style="margin: 0 auto" id="video">
+            <h1>BUMPER VIDEO</h1>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/oByeQR_6xAc">
+            </iframe>
+
+            <h1>CINEMAGRAPH</h1>
+
+            <img style="width: 50%;" src="pics/Comp%201.gif" alt="">
+
+        <h1>A-FRAME SCENE</h1>
+
+        <video style="width: 50%; margin-bottom: 5rem;" src="video/Screen%20Recording%202019-12-18%20at%204.11.43%20PM.mp4" controls></video>
+        </div>
+
+    </main>
 
 
-    </script>
 </body>
+<script>
+    //    Alle elementer i datavisen laves om til en variabel.
+    var slider = document.getElementById("myRange");
+    var co2 = document.getElementById("ton");
+    var tid = document.getElementById("timer");
+    var tid2 = document.getElementById("minutter");
+
+    var theJson;
+    //    Global variabel som bruges som objekt til et array, hvor vi løber al vores JSON data igennem.
+
+    document.addEventListener("DOMContentLoaded", getList);
+
+    //    Async funktion som henter JSON data, fra vores dataset og tiljøjer det til vores globale variabel.
+    async function getList() {
+        let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1T7QLxXy3YAkULDdFjzzs8l9kez4-OnIH1FowfuraoSI/od6/public/values?alt=json");
+        theJson = await jsonData.json();
+        console.log("hej");
+        console.log(theJson);
+        showJson();
+
+    }
+
+
+    co2.innerHTML = slider.value;
+    //    Sætter default value (50) og udskriver den
+
+
+    //    Laver alle vores landeknapper til en variabel så vi senere hen kan tildele JSON data.
+    var cairo = document.getElementById("cairo");
+    var moskva = document.getElementById("moskva");
+    var new_york = document.getElementById("newyork");
+    var accra = document.getElementById("accra");
+    var nuuk = document.getElementById("nuuk");
+
+
+    //    funktion som udregner det korrekte output for data, når man rykker på slideren.
+    slider.oninput = function() {
+        const kvarter = this.value;
+        const timer = Math.floor(kvarter / 4);
+        const minutter = kvarter % 4 * 15;
+
+
+        co2.innerHTML = Math.round(this.value / 4 * 109);
+        tid.innerHTML = timer;
+        tid2.innerHTML = minutter;
+    }
+
+
+
+
+
+    //Funktion der fremviser den korrekte data for et hvis land.
+    function showJson() {
+
+
+        console.log(theJson)
+        theJson.feed.entry.forEach((dest, i) => {
+
+
+
+            if (i === 0) {
+                cairo.addEventListener("click", () => {
+                    document.querySelector(".slidecontainer").style.display = "block";
+                    co2.innerHTML = dest.gsx$co2.$t;
+                    slider.value = dest.gsx$slidervalue.$t;
+                    tid.innerHTML = dest.gsx$timer.$t;
+                    tid2.innerHTML = dest.gsx$kvarter.$t
+                    //        ændre 500 til en json værdi
+                })
+
+            } else if (i === 1) {
+                moskva.addEventListener("click", () => {
+                    document.querySelector(".slidecontainer").style.display = "block";
+                    co2.innerHTML = dest.gsx$co2.$t;
+                    slider.value = dest.gsx$slidervalue.$t;
+                    tid.innerHTML = dest.gsx$timer.$t;
+                    tid2.innerHTML = dest.gsx$kvarter.$t
+                })
+
+            } else if (i === 2) {
+                new_york.addEventListener("click", () => {
+                    document.querySelector(".slidecontainer").style.display = "block";
+                    co2.innerHTML = dest.gsx$co2.$t;
+                    slider.value = dest.gsx$slidervalue.$t;
+                    tid.innerHTML = dest.gsx$timer.$t;
+                    tid2.innerHTML = dest.gsx$kvarter.$t
+                })
+
+            } else if (i === 3) {
+                accra.addEventListener("click", () => {
+                    document.querySelector(".slidecontainer").style.display = "block";
+                    co2.innerHTML = dest.gsx$co2.$t;
+                    slider.value = dest.gsx$slidervalue.$t;
+                    tid.innerHTML = dest.gsx$timer.$t;
+                    tid2.innerHTML = dest.gsx$kvarter.$t
+                })
+
+            } else {
+                nuuk.addEventListener("click", () => {
+                    document.querySelector(".slidecontainer").style.display = "block";
+                    co2.innerHTML = dest.gsx$co2.$t;
+                    slider.value = dest.gsx$slidervalue.$t;
+                    tid.innerHTML = dest.gsx$timer.$t;
+                    tid2.innerHTML = dest.gsx$kvarter.$t
+                })
+
+
+            }
+
+
+        })
+
+    }
+
+</script>
+
+<script>
+
+</script>
 
 </html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
