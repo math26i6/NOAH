@@ -10,12 +10,9 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(#2C6B9A, #204b6a);
+    background: linear-gradient(#2C6B9A, #0b1b26);
     font-family: 'roboto', sans-serif;
     text-decoration: none;
-
-
-
 }
 
 a {

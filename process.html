@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+#grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .1fr ;
+
+}
+
+.viz_text {
+
+    font-size: 3vw;
+    margin: 0;
+}
+
+ #grid_text {
+
+
+        margin: 1rem;
+        padding: 1rem;
+     width: 60%;
+     margin: 2rem auto;
+
+        text-align: center;
+        background: #00A05A;
+        border-radius: 0px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+#earth {
+    position: relative;
+    background-image: url(earth_PNG16.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+
+}
+
+#co2 {
+    position: absolute;
+    width: 100%;
+    top: 15vw;
+    margin-top: 0 auto;
+
+}
+
+.slidecontainer {
+    display: none;
+    width: 100%;
+    transition: 3s ease;
+}
+
+.slider {
+    -webkit-appearance: none;
+
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #fafafa;
+    outline: none;
+    opacity: 0.7;
+    transition: 3s ease;
+    transition: opacity .2s;
+    position: absolute;
+    top: 50%;
+}
+
+
+.grid_text {
+    display: block;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+
+    appearance: none;
+    transition: 3s ease;
+    width: 65px;
+    height: 65px;
+    border: 1;
+    background: url('fly.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+
+}
+
+.slider::-moz-range-thumb {
+
+    transition: 3s ease;
+    width: 65px;
+    height: 65px;
+    border: 1;
+    background: url('fly.png');
+    cursor: pointer;
+}
+
+#co2 button {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0);
+
+    cursor: pointer;
+    border: none;
+}
+
+#co2 button:hover {
+    opacity: 0.8;
+    transition: .3s ease;
+}
+
+#co2 button:hover p {
+    display: block;
+    color: white;
+}
+
+#co2 button p {
+    display: none;
+    font-size: 1rem;
+}
+
+#cairo {
+    bottom: 4.5vw;
+    right: 1.5vw;
+    background-image: url(egypt.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#moskva {
+    top: -15vw;
+    right: 4.5vw;
+    background-image: url(Rusland.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#newyork {
+    top: -10vw;
+    left: 4vw;
+    background-image: url(USA.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#accra {
+    top: 3vw;
+    right: 7vw;
+    background-image: url(Ghana.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#nuuk {
+    top: -16vw;
+    right: 14.5vw;
+    background-image: url(greenland.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div id="process_grid">
+
+
+        <div id="earth">
+
+            <div id="co2">
+
+                <button id="cairo">
+                    <p class="viz_tekst">Cairo</p>
+                </button>
+
+                <button id="moskva">
+                    <p class="viz_tekst">Moskva</p>
+                </button>
+
+                <button id="newyork">
+                    <p class="viz_tekst">New York</p>
+                </button>
+                <button id="accra">
+                    <p class="viz_tekst">Accra</p>
+                </button>
+                <button id="nuuk">
+                    <p class="viz_tekst">Nuuk</p>
+                </button>
+
+
+
+
+
+
+
+
+
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="2" max="32" value="" class="slider" id="myRange">
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
