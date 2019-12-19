@@ -1469,7 +1469,7 @@ button {
     }
 
     #grid_text p {
-        text-align: left;
+        text-align: center;
     }
 
     .viz_text {
@@ -1604,6 +1604,11 @@ button {
         display: grid;
         grid-template-columns: 1fr;
         align-content: flex-start;
+
+    }
+
+    .click_fade:hover{
+        opacity: 0.8;
 
     }
 

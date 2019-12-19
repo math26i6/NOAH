@@ -15,7 +15,7 @@
     <main>
         <!----------------------------------------NAV START--------------------------->
         <div class="loading"><img class="loading_ani" src="Logo%20animation_3.gif" alt=""></div>
-        <div id="donate_fixed">
+        <div id="donate_fixed" class="click_fade">
             <a href="http://www.noah.dk/st%C3%B8t">
                 <p>STØT <br> NU</p>
             </a>
@@ -56,7 +56,7 @@
             <a href="#splash" onclick="myFunction()">
                 <p>FORSIDE</p>
             </a>
-            <a href="#arrow" onclick="myFunction()">
+            <a href="#earth_txt" onclick="myFunction()">
                 <p>FLYFART</p>
             </a>
             <a href="#staygrounded" onclick="myFunction()">
@@ -86,9 +86,9 @@
                 <p>I 2018 steg antallet af afrejsende flypassagerer fra de danske lufthavne til 18,2 mio hvoraf 90 pct fløj internationalt. Det samlede passagerantal var 706.000 eller 4 pct. højere end i 2017. Det er det største antal passagerer fra danske lufthavne nogensinde. </p>
             </div>
             <a href="http://www.noah.dk/st%C3%B8t">
-                <div id="donate_front">STØT NU</div>
+                <div id="donate_front" class="click_fade">STØT NU</div>
             </a>
-            <a href="#arrow">
+            <a href="#dataviz">
                 <div id="arrow">⇩</div>
             </a>
         </section>
@@ -104,7 +104,7 @@
 
         <div id="earth_txt">
             <h1> Hvor meget udleder du? </h1>
-            <p>Når man flyver til en feriedestination er det for det meste smertefrit og nemt. Det underliggende probleme er at fly er verdens mest forurenende transportform. Luftfart udgør en kæmpe belastning for både miljø og klima. Fly udleder en stor del af danskernes årlige CO2 udslip, når det kommer til transport. <br> <br>
+            <p>Når man flyver til en feriedestination er det for det meste smertefrit og nemt. Det underliggende problem er at fly er verdens mest forurenende transportform. Luftfart udgør en kæmpe belastning for både miljø og klima. Fly udleder en stor del af danskernes årlige CO2 udslip, når det kommer til transport. <br> <br>
                 <span style="color: #00e275;"> På data visualiseringen herunder kan du se nogle velkendte rejsedestinationer. Klik på dem og se hvor meget du ville udlede på den tur.</span>
             </p>
 
@@ -153,9 +153,9 @@
                 <div class="earth_sky_right"></div>
                    <div id="grid_text">
 
-                    <p class="viz_text">CO2 udledt på rejsen: <span id="ton"></span> kg CO2 </p>
-                    <p class="viz_text">Rejse tid: <span id="timer"></span> Timer og <span id="minutter"></span> Minutter</p>
-                    <p class="viz_text">Rejsen svarer til <span id="tog"></span> km i tog </p>
+                    <p class="viz_text">CO2 udledt på rejsen: <span style="font-weight: bolder;" id="ton"></span> kg CO2 </p>
+                    <p class="viz_text">Rejse tid: <span style="font-weight: bolder;" id="timer"></span> Timer og <span style="font-weight: bolder;" id="minutter"></span> Minutter</p>
+                    <p class="viz_text">Rejsen svarer til <span style="font-weight: bolder;" id="tog"></span> km i tog </p>
 
 
                 </div>
@@ -163,7 +163,7 @@
             </div>
 
             <a href="http://www.noah.dk/st%C3%B8t">
-                <div class="donate">STØT NU</div>
+                <div class="donate click_fade">STØT NU</div>
             </a>
 
         </section>
@@ -225,16 +225,16 @@
             <div id="facts">
                 <div id="fact_txt">
                     <h1>Hvem er NOAH?</h1>
-                    <p>NOAH arbejder for, at alle nulevende og fremtidige generationer skal have lige adgang til jordens ressourcer - uden at miljøet overbelastes. Det kalder vi for miljøretfærdighed, og vi arbejder hver dag på at komme dette nærmere gennem vores miljøpolitiske programmer. NOAH sørger for at miljøet kommer i først række, og at vi alle står sammen for at skabe en bedre fremtid for de kommende generationer. <br><span style="color: #00e275;">
-                            Klik på billedet for at få mere at vide.</span></p>
+                    <p>NOAH arbejder for, at alle nulevende og fremtidige generationer skal have lige adgang til jordens ressourcer - uden at miljøet overbelastes. Det kalder vi for miljøretfærdighed, og vi arbejder hver dag på at komme dette nærmere gennem vores miljøpolitiske programmer. NOAH sørger for at miljøet kommer i først række, og at vi alle står sammen for at skabe en bedre fremtid for de kommende generationer. <br><a href="http://noah.dk"><span style="color: #00e275;">
+                            Klik på billedet for at få mere at vide.</span></a></p>
                 </div>
                 <a href="http://noah.dk"><img class="click_fade" src="pics/om_noah.jpg" alt=""></a>
                 <div id="fact_txt">
                     <h1>Hvorfor støtte NOAH?</h1>
-                    <p>Når du støtter NOAH i kampen mod flyfart, støtter du vel organiseret og velstruktureret organisation som yder deres ypperste for at skabe opsigt omkring klimaet, samt sørge for at klimakrisen bliver hørt af dem der kan gøre noget ved det!
-                        Ved at støtte os underskriver du samtidig for at udvidelsen af Kastrup lufthavn skal stoppes. <br><br>
-                        <span style="color: #00e275;">
-                            Klik på billedet for at se hvor slemt fly fart faktisk er.</span>
+                    <p>Når du støtter NOAH i kampen mod flyfart, støtter du en vel organiseret og velstruktureret organisation som yder deres ypperste for at skabe opsigt omkring klimaet. Noah vil sørge for at klimakrisen bliver hørt af dem der kan gøre noget ved det!
+                        Ved at støtte os er du med i kampen om at stoppe udvidelsen af Kastrup lufthavn. <br>
+                        <a href="http://philipsengraphics.dk/kea/a_frame_ngo/aframe.html"><span style="color: #00e275;">
+                            Klik på billedet for at se hvor slemt fly fart faktisk er.</span></a>
                     </p>
                 </div>
 
@@ -260,23 +260,23 @@
                 <div class="icon">
                     <img src="pics/iconerseb-05.png" alt="">
                     <h1>Hjælp os</h1>
-                    <p>For at hjælpe bevægelsen ville du kunne nedsætte dit fly forbrug. I stedet for at tage flyet til rom i efterårsferien så prøv at tage toget. I stedet for at flyve til Aalborg så tag toget over Danmark og nyd udsigten over de skønne marker.</p>
+                    <p>For at hjælpe bevægelsen bør du nedsætte dit fly forbrug. I stedet for at tage flyet til rom i efterårsferien så prøv at tage toget. I stedet for at flyve til Aalborg så tag toget over Danmark og nyd udsigten over de skønne marker.</p>
                 </div>
                 <div class="icon">
                     <img src="pics/iconerseb-08.png" alt="">
-                    <h1>Snak med andre</h1>
-                    <p>For at skabe mere opsigt omkring flyfarten i verden så snak med andre om det. Snak om hvad i kan gøre for at stoppe jeres eget aftryk på miljøet, og hvordan i kan undgå at flyve i fremtiden. </p>
+                    <h1>Tal med andre</h1>
+                    <p>For at skabe mere opsigt omkring flyfarten i verden så tal med andre om det. Fortæl andre om hvad de kan gøre for at sænke deres aftryk på miljøet, og hvordan de kan undgå at flyve i fremtiden. </p>
                 </div>
                 <div class="icon">
                     <img src="pics/iconerseb-02.png" alt="">
                     <h1>Sammen er vi stærke</h1>
-                    <p>En person har ikke meget mulighed for at ændre folks holdninger og rutiner. Men hvis man er sammen om det og enige om at der skal gøres noget ved problemet, kan vi sammen nedsætte fly forbruget i Danmark. Alene kan man løfte en sten, sammen kan man flytte bjerge. </p>
+                    <p>En person har ikke meget mulighed for at ændre folks holdninger og rutiner. Men hvis man er sammen om det og enige om at der skal gøres noget ved problemet, kan vi nedsætte fly forbruget i Danmark. Alene kan man løfte en sten, sammen kan man flytte bjerge. </p>
                 </div>
                 <div class="icon">
                     <img src="pics/iconerseb-06.png" alt="">
                     <h1>Forklar andre om NOAH</h1>
                     <p>
-                        NOAH har eksisteret i over 50 år, men der er stadig en del der ikke kender til vores budskaber og interesse for klimaet og miljøet. Netop derfor er det vigtigt for os at budskabet bliver delt ud, så de nye generationer kan hjælpe til. NOAH råder derfor til at man tager fat i sin arbejdsgiver og prøver at overbevise dem om hvorfor de skal indgå en “nul-fly-aftale” med NOAH så vi kan komme et skridt tættere på et nedsænket CO2 udslip. </p>
+                        NOAH har eksisteret i over 50 år, men der er stadig en del der ikke kender til vores budskaber og interesse for klimaet og miljøet. Netop derfor er det vigtigt for os at budskabet bliver delt ud, så de nye generationer kan hjælpe til. NOAH råder til at man tager fat i sin arbejdsgiver og prøver at overbevise dem om hvorfor de skal indgå en “nul-fly-aftale” med NOAH så vi kan komme et skridt tættere på et nedsænket CO2 udslip. </p>
                 </div>
 
             </div>
@@ -294,10 +294,10 @@
 
             <div id="ctas">
                 <a href="http://www.noah.dk/st%C3%B8t">
-                    <div class="donate_bottom">STØT OS</div>
+                    <div class="donate_bottom click_fade">STØT OS</div>
                 </a>
                 <a href="https://noah.dk/aktiv">
-                    <div class="donate_medlem">BLIV MEDLEM</div>
+                    <div class="donate_medlem click_fade">BLIV MEDLEM</div>
                 </a>
             </div>
 
