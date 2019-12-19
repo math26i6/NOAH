@@ -597,6 +597,8 @@ https://codepen.io/erikterwan/pen/EVzeRP/
     margin: 2rem auto;
 }
 
+
+
 .column img {
     width: 100%;
 }
@@ -1592,8 +1594,8 @@ button {
     }
 
     iframe{
-        width: 420 ;
-        height: 345;
+        width: 420px ;
+        height: 325px;
     }
 
 
